@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read Entries - Treasured Scribbles</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Background Video -->
+    <video autoplay loop muted id="background-video">
+        <source src="assets/diary_read.mp4" type="video/mp4">
+    </video>
+
+    <div class="container">
+        <h1>📖 Memories & Messages</h1>
+        <ul id="entry-list" class="entry-list">
+            <p>Loading entries...</p>
+        </ul>
+        <button class="styled-button" onclick="window.location.href='index.html'">🏠 Back to Home</button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/11.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.5.0/firebase-firestore.js"></script>
+    <script src="firebase.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", loadEntries);
+    </script>
+<audio id="background-music" loop>
+    <source src="assets/soft-music.mp3" type="audio/mp3">
+</audio>
+
+<button id="music-toggle" onclick="toggleMusic()">🔊 Music On</button>
+
+<script src="music.js"></script>
+
+</body>
+</html>

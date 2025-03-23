@@ -1,0 +1,30 @@
+/* Signature Pad Container */
+.signature-container {
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Signature Canvas */
+#signature-pad {
+    width: 100%;
+    height: 150px;
+    border: 2px solid black;
+    background-color: white;
+    cursor: crosshair;
+}
+
+/* Clear Button */
+#clear-signature {
+    display: block;
+    margin-top: 10px;
+    background: #8B0000;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#clear-signature:hover {
+    background: #A52A2A;
+}

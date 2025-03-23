@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treasured Scribbles</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Background Video -->
+    <video autoplay loop muted id="background-video">
+        <source src="assets/diary_bg.mp4" type="video/mp4">
+    </video>
+
+    <!-- Main Container -->
+    <div class="container">
+        <h1 id="handwritten-text">👋This is Abin, 
+                              welcome to my 📜!!</h1>
+        
+        <!-- Buttons -->
+        <div class="buttons">
+            <button class="styled-button" onclick="showReadPrompt()">📖 Read Entries</button>
+            <button class="styled-button" onclick="showWritePrompt()">✍️ Write an Entry</button>
+        </div>
+    </div>
+
+    <!-- Floating Feather -->
+    <img src="assets/feather.gif" alt="Floating Feather" class="floating-feather">
+
+    <!-- Audio for Background Music -->
+    <audio id="background-music" loop autoplay>
+        <source src="assets/landing_page.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
