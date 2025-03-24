@@ -1,9 +1,3 @@
-document.addEventListener("DOMContentLoaded", fetchEntries);
-
-// Ensure Firebase Firestore is initialized
-const db = firebase.firestore();
-
-// Function to fetch and display diary entries from Firebase
 async function fetchEntries() {
     const entriesList = document.getElementById("entries-list");
     entriesList.innerHTML = "Loading...";
@@ -20,16 +14,18 @@ async function fetchEntries() {
         snapshot.forEach(doc => {
             const data = doc.data();
             const listItem = document.createElement("li");
-            listItem.innerHTML = `<button class="entry-btn" onclick="viewEntry('${doc.id}')">${data.name}</button>`;
+            listItem.innerHTML = `
+                <button class="entry-btn" onclick="viewEntry('${doc.id}')">${data.name}</button>
+            `;
             entriesList.appendChild(listItem);
         });
     } catch (error) {
         console.error("Error fetching entries:", error);
-        entriesList.innerHTML = "<p>Error loading entries. Please try again later.</p>";
+        entriesList.innerHTML = "<p>Failed to load entries.</p>";
     }
 }
 
-// Function to display selected entry details
+// Function to show selected entry details
 async function viewEntry(entryId) {
     const entryDisplay = document.getElementById("entry-display");
     entryDisplay.innerHTML = "Loading entry...";
